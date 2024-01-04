@@ -1,27 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* navbar */
+.navbar {
+  @apply flex items-center justify-between w-full px-6 py-1 bg-green-900;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navbar .tabs {
+  @apply flex items-center gap-5 font-medium text-green-500;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.tabs a {
+  @apply hover:text-[#fff];
 }
+.dynamic-btn {
+  @apply px-5 py-1 bg-green-600 text-[16px] font-semibold text-gray-200 rounded-md w-fit;
+}
+/* footer */
+.footer {
+  @apply w-full flex items-center justify-between px-6 py-2 bg-green-900 text-white;
+}
+.footer address, .footer div {
+  @apply flex items-center gap-3 cursor-context-menu;
+}
+.footer p{
+  @apply cursor-context-menu;
+}
+address{
+  @apply gap-1;
+}
+.footer div div{
+  @apply text-[18px];
+}
+/* contactUsForm */
