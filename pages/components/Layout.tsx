@@ -6,7 +6,9 @@ const Layout = ({ children }: any) => {
   return (
     <div>
       <Navbar />
-      <div className="h-screen">{children}</div>
+      <div className="h-fit py-4 px-5 grid justify-items-center">
+        {children}
+      </div>
       <Footer />
     </div>
   );
